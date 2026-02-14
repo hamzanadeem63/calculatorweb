@@ -1,0 +1,106 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== BODY DESIGN ===== */
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* ===== CALCULATOR CARD ===== */
+.calculator {
+  background: #111827;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ===== DISPLAY SCREEN ===== */
+.display {
+  background: #020617;
+  color: #22c55e;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 12px;
+  min-height: 70px;
+  overflow-x: auto;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* ===== BUTTON GRID ===== */
+.buttons {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ===== BUTTON BASE ===== */
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ===== COLORS ===== */
+.btn-number {
+  background: #1f2937;
+  color: white;
+}
+
+.btn-operator {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-clear {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-delete {
+  background: #7c3aed;
+  color: white;
+}
+
+.btn-equal {
+  background: #16a34a;
+  color: white;
+  grid-column: span 2;
+}
+
+/* ===== HOVER EFFECT ===== */
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 400px) {
+  .calculator {
+    max-width: 95%;
+  }
+  .display {
+    font-size: 1.6rem;
+  }
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
